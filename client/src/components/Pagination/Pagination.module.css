@@ -1,0 +1,11 @@
+.pag {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  color: bisque;
+  background-color: #222222;
+  width: 25px;
+  height: 25px;
+}

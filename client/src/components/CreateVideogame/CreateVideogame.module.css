@@ -1,0 +1,71 @@
+.link {
+  text-decoration: none;
+  color: bisque;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: bisque;
+  width: 40vw;
+  height: 40vw;
+  background-color: #1b1c1d;
+  margin-top: 10px;
+  margin-right: 5vw;
+  margin-left: 10vw;
+  filter: opacity(90%);
+}
+
+.form div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.background {
+  background-image: url("../../Images/form.webp");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  color: bisque;
+  text-align: center;
+}
+
+.title {
+  background-color: #222222;
+  width: 20vw;
+  text-align: center;
+  margin-left: 40%;
+}
+
+.delete {
+  color: bisque;
+  background-color: #1b1c1d;
+  width: 25vw;
+  height: 40vw;
+  display: flex;
+  filter: opacity(90%);
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.deletes {
+  text-align: center;
+  width: 50%;
+  margin-top: 4vh;
+}
+
+.all {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.select {
+  color: bisque;
+  background-color: black;
+}

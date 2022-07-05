@@ -1,0 +1,18 @@
+.detail {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100%;
+  color: bisque;
+  background-color: #252523;
+  background-size: cover;
+}
+
+.image {
+  width: 500px;
+  height: 300px;
+}
+
+.link {
+  text-decoration: none;
+}

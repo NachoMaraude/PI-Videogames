@@ -1,0 +1,54 @@
+.background {
+  background-image: url("../../Images/fondo.webp");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-position: center;
+  flex-direction: column;
+}
+
+.create {
+  margin-left: 43%;
+  width: 15vw;
+  height: 10px;
+}
+
+body {
+  background-color: black;
+  color: bisque;
+  display: flex;
+  text-align: center;
+  align-content: center;
+}
+
+.videogames {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  width: 100vw;
+  height: auto;
+  padding: 0px;
+}
+
+.link {
+  text-decoration: none;
+  color: bisque;
+}
+
+.filters {
+  display: flex;
+  align-content: center;
+  text-align: center;
+  margin-left: 20%;
+}
+
+.filter {
+  margin: 22px;
+}
+
+.select {
+  color: bisque;
+  background-color: black;
+}

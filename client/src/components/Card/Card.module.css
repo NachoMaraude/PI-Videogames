@@ -1,0 +1,19 @@
+.img {
+  width: 270px;
+  height: 200px;
+}
+
+.cards {
+  margin: 20px;
+  height: 65vh;
+  width: 41vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid black;
+  background-color: bisque;
+  filter: brightness(90%);
+  color: black;
+}

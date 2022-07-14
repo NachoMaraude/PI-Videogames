@@ -24,6 +24,7 @@ export default function Search() {
         placeholder="Search Videogames"
         onChange={(e) => handleInputChange(e)}
         className={styles.select}
+        value={name}
       />
       <button
         type="submit"

@@ -16,4 +16,6 @@
   background-color: bisque;
   filter: brightness(90%);
   color: black;
+  border: 2px solid bisque;
+  border-radius: 3px;
 }

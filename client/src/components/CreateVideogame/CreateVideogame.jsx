@@ -9,7 +9,7 @@ function validate(input) {
   if (!input.name) {
     errors.name = "Name is required";
   }
-  if (input.name.length < 5 || input.name.length > 50) {
+  if ((input.name && input.name.length < 5) || input.name.length > 50) {
     errors.name = "Invalid name";
   }
   if (!input.rating) {
@@ -21,11 +21,14 @@ function validate(input) {
   if (!input.description) {
     errors.description = "Description is required";
   }
-  if (input.description.length < 20) {
+  if (input.description && input.description.length < 20) {
     errors.description = "Invalid Description";
   }
   if (!input.genres) {
     errors.diets = "Genres is required";
+  }
+  if (!input.price) {
+    errors.price = "Price is required";
   }
   if (!input.platforms) {
     errors.platforms = "Platforms is required";
@@ -42,6 +45,7 @@ export default function CreateVideogame() {
     name: "",
     image: "",
     rating: 0,
+    price: 0,
     description: "",
     released: "",
     platforms: [],
@@ -129,6 +133,7 @@ export default function CreateVideogame() {
         name: "",
         image: "",
         rating: 0,
+        price: 0,
         description: "",
         released: "",
         platforms: [],
@@ -151,7 +156,7 @@ export default function CreateVideogame() {
             <label>Name</label>
             <input
               type="text"
-              placeholder="Name must be between 5 and 50 letters"
+              placeholder="Between 5 and 50 letters"
               value={input.name}
               name="name"
               onChange={(e) => handleInputChange(e)}
@@ -167,7 +172,7 @@ export default function CreateVideogame() {
               min="0"
               max="5"
               step="0.1"
-              placeholder="Rating must be between 0 and 5"
+              placeholder="Between 0 and 5"
               value={input.rating}
               name="rating"
               onChange={(e) => handleInputChange(e)}
@@ -201,6 +206,17 @@ export default function CreateVideogame() {
           </div>
 
           <div>
+            <label>Price</label>
+            <input
+              type="number"
+              value={input.price}
+              name="price"
+              onChange={(e) => handleInputChange(e)}
+            />
+          </div>
+          <p>{errors?.price}</p>
+
+          <div>
             <label>Image</label>
             <input
               type="url"
@@ -217,9 +233,10 @@ export default function CreateVideogame() {
               onChange={(p) => handleSelectPlatforms(p)}
               className={styles.select}
             >
+              <option hidden>Platforms</option>
               {platforms?.map((p) => {
                 return (
-                  <option key={p} value={p}>
+                  <option key={p.id} value={p}>
                     {p}
                   </option>
                 );
@@ -233,6 +250,7 @@ export default function CreateVideogame() {
               onChange={(e) => handleSelectGenres(e)}
               className={styles.select}
             >
+              <option hidden>Genres</option>
               {genres?.map((e) => {
                 return (
                   <option key={e.id} value={e}>
@@ -244,16 +262,18 @@ export default function CreateVideogame() {
             {errors.genres && <p>{errors.genres}</p>}
           </div>
           <div>
-            <button type="submit" className={styles.select}>
-              Create Videogame
-            </button>
+            {errors ? null : (
+              <button type="submit" className={styles.select}>
+                Create Videogame
+              </button>
+            )}
           </div>
         </form>
         <div className={styles.delete}>
           <div className={styles.deletes}>
             <label>Platforms</label>
             {input.platforms.map((e) => (
-              <div key={e}>
+              <div key={e.id}>
                 <p>{e}</p>
                 <button
                   onClick={() => handleDeletePlatforms(e)}

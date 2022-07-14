@@ -61,21 +61,18 @@ export default function Home() {
     e.preventDefault();
     dispatch(getGenresFilter(e.target.value));
     setCurrentPage(1);
-    setOrder(`Ordered ${e.target.value}`);
   }
 
   function handlePlatforms(e) {
     e.preventDefault();
     dispatch(getPlatformsFilter(e.target.value));
     setCurrentPage(1);
-    setOrder(`Ordered ${e.target.value}`);
   }
 
   function handleDbApi(e) {
     e.preventDefault();
     dispatch(getDbApiFilter(e.target.value));
     setCurrentPage(1);
-    setOrder(`Ordered ${e.target.value}`);
   }
 
   return (
@@ -94,7 +91,9 @@ export default function Home() {
           <div className={styles.filter}>
             <h4>Alphabetical Order:</h4>
             <select onChange={(e) => handleAscDes(e)} className={styles.select}>
-              <option value="Default">Default</option>
+              <option value="Default" hidden>
+                Alphabetical
+              </option>
               <option value="Ascendant">A - Z</option>
               <option value="Descendant">Z - A</option>
             </select>
@@ -102,7 +101,9 @@ export default function Home() {
           <div className={styles.filter}>
             <h4>Rating Order:</h4>
             <select onChange={(e) => handleRating(e)} className={styles.select}>
-              <option value="Default">Default</option>
+              <option value="Default" hidden>
+                Rating
+              </option>
               <option value="Ascendant">Ascendant</option>
               <option value="Descendant">Descendant</option>
             </select>
@@ -136,7 +137,11 @@ export default function Home() {
             >
               <option value="all">All</option>
               {platforms?.map((e) => {
-                return <option value={e}>{e}</option>;
+                return (
+                  <option key={e} value={e}>
+                    {e}
+                  </option>
+                );
               })}
             </select>
           </div>
@@ -156,7 +161,7 @@ export default function Home() {
 
         <div className={styles.videogames}>
           {allPages?.map((e) => (
-            <Link to={"/home/" + e.id} key={e.id} className={styles.link}>
+            <Link to={"/home/" + e.id} key={e.id} className={styles.cards}>
               <div key={e.id}>
                 <Card
                   name={e.name}

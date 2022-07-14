@@ -22,7 +22,7 @@ export default function VideogameDetail() {
       {videogameDetail.name ? (
         <div>
           <div>
-            <button>
+            <button className={styles.back}>
               <Link to="/home" className={styles.link}>
                 {" "}
                 Back to view all videogames

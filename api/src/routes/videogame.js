@@ -44,14 +44,6 @@ router.get("/:id", async (req, res) => {
       image: info.data.background_image,
     };
     res.status(200).json(game);
-    // const allId = await getAllVideogames();
-    // if (id) {
-    //   let videogameId = await allId.find((e) => e.id == id);
-    //   if (videogameId) res.status(200).json(videogameId);
-    //   else res.status(404).json("Videogame not found");
-    // } else {
-    //   res.status(200).json(allId);
-    // }
   } catch (error) {
     res.status(404).json(error.message);
   }

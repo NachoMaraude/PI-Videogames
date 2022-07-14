@@ -15,11 +15,14 @@ export const CLEAN = "CLEAN";
 
 export function getVideogames() {
   return async function (dispatch) {
-    let json = await axios.get("http://localhost:3001/videogames");
-    return dispatch({
-      type: "GET_VIDEOGAMES",
-      payload: json.data,
-    });
+    await fetch("http://localhost:3001/videogames")
+      .then((res) => res.json())
+      .then((json) => {
+        dispatch({
+          type: "GET_VIDEOGAMES",
+          payload: json,
+        });
+      });
   };
 }
 

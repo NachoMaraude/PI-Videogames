@@ -1,4 +1,5 @@
 .select {
   color: bisque;
   background-color: #222222;
+  cursor: pointer;
 }

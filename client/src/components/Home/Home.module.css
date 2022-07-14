@@ -12,6 +12,7 @@
   margin-left: 43%;
   width: 15vw;
   height: 10px;
+  cursor: pointer;
 }
 
 body {
@@ -51,4 +52,10 @@ body {
 .select {
   color: bisque;
   background-color: black;
+  cursor: pointer;
+}
+
+.cards {
+  text-decoration: none;
+  color: bisque;
 }

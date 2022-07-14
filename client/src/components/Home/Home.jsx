@@ -150,6 +150,7 @@ export default function Home() {
           videogamesPerPage={videogamesPerPage}
           allVideogames={allVideogames.length}
           pagination={pagination}
+          currentPage={currentPage}
         />
         <div>
           <button onClick={(e) => handleRefresh(e)} className={styles.select}>

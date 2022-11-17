@@ -3,6 +3,10 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
+    "engines": {
+        "node": "16.x",
+        "npm": "8.x"
+    },
     "scripts": {
         "start": "nodemon -L",
         "test": "mocha -w ./tests/**/*.spec.js",
@@ -10,10 +14,6 @@
     },
     "author": "Henry",
     "license": "ISC",
-    "engines": {
-        "node": "16.x",
-        "npm": "8.x"
-    },
     "dependencies": {
         "axios": "^0.27.2",
         "body-parser": "^1.19.0",

@@ -6,7 +6,7 @@
     "scripts": {
         "start": "nodemon -L",
         "test": "mocha -w ./tests/**/*.spec.js",
-        "build": "npm install"
+        "build": ""
     },
     "author": "Henry",
     "license": "ISC",

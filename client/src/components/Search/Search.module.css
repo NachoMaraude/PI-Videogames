@@ -1,5 +1,6 @@
 .select {
-  color: bisque;
-  background-color: #222222;
-  cursor: pointer;
+    color: bisque;
+    background-color: #222222;
+    cursor: pointer;
+    font-size: medium;
 }

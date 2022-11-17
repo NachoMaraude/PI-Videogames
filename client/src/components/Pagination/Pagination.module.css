@@ -1,20 +1,27 @@
 .pag {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    margin-left: 40%;
+    gap: 2%;
+    margin-bottom: 2%;
 }
 
 .buttons {
-  color: bisque;
-  background-color: #222222;
-  width: 25px;
-  height: 25px;
-  cursor: pointer;
+    color: bisque;
+    background-color: #222222;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    font-size: medium;
 }
 
 .current {
-  color: #222222;
-  background-color: bisque;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
+    color: #222222;
+    background-color: bisque;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: large;
 }

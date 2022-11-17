@@ -1,61 +1,75 @@
 .background {
-  background-image: url("../../Images/fondo.webp");
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  background-position: center;
-  flex-direction: column;
+    background-image: url("../../Images/fondo.webp");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-position: center;
+    flex-direction: column;
 }
 
 .create {
-  margin-left: 43%;
-  width: 15vw;
-  height: 10px;
-  cursor: pointer;
+    margin-left: 40%;
+    width: 20%;
+    height: 10px;
+    cursor: pointer;
+    justify-content: center;
 }
 
 body {
-  background-color: black;
-  color: bisque;
-  display: flex;
-  text-align: center;
-  align-content: center;
+    background-color: black;
+    color: bisque;
+    display: flex;
+    text-align: center;
+    align-content: center;
 }
 
 .videogames {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: flex-start;
-  width: 100vw;
-  height: auto;
-  padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    width: 100%;
+    height: 100%;
+    margin-top: 2%;
 }
 
 .link {
-  text-decoration: none;
-  color: bisque;
+    text-decoration: none;
+    color: bisque;
 }
 
 .filters {
-  display: flex;
-  align-content: center;
-  text-align: center;
-  margin-left: 20%;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
 }
 
 .filter {
-  margin: 22px;
+    margin: 70px;
+    font-size: large;
 }
 
 .select {
-  color: bisque;
-  background-color: black;
-  cursor: pointer;
+    color: bisque;
+    background-color: black;
+    cursor: pointer;
+    height: 30px;
+    font-size: medium;
 }
 
 .cards {
-  text-decoration: none;
-  color: bisque;
+    text-decoration: none;
+    color: bisque;
+    margin: 1%;
+    width: 20%;
+}
+
+.refresh {
+    color: bisque;
+    background-color: black;
+    cursor: pointer;
+    font-size: medium;
+    margin-bottom: 2%;
 }
